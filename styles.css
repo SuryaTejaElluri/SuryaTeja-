@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, cyan, rgb(55, 55, 241));
+   background: linear-gradient(to right, #2c3e50, #4a4b7f);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,30 +29,48 @@ header h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
+    
 }
 
 section {
     margin-bottom: 20px;
 }
 
+#profiles a {
+        color: black;           
+        text-decoration: none;
+    }
+
+    #profiles a:hover {
+        color: #333;            
+        text-decoration: underline; 
+    }
+
 #profile-picture {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    margin-bottom: 20px;
+     transition: transform 1s ease-in-out;
 }
 
 #profile-picture img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid cyan;
+    border: 4px solid #305071;
+   
     /* add transition */
+}
+
+#profile-picture:hover{
+    transform: scale(1.2);
 }
 
 section h2 {
     font-size: 1.7rem;
-    color: rgb(0, 149, 255);
+    color: #2a629a;
     margin: 10px;
     text-transform: uppercase;
 }
@@ -74,7 +92,27 @@ ul li {
     background-color: #f3f4f6;
     border-radius: 15px;
     margin: 10px;
-    /* transition on hover to be added */
+    
+}
+ul a{
+    text-decoration: none;
+    color: black;
+}
+
+ul li:hover {
+    animation: pulse 2s infinite;
+    
+}
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 ul li i {
@@ -82,7 +120,7 @@ ul li i {
 }
 
 button {
-    background: linear-gradient(to right, cyan, rgb(55, 55, 241));
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
     color: white;
     font-size: 1rem;
     padding: 12px 24px;
@@ -90,7 +128,24 @@ button {
     border-radius: 15px;
     cursor: pointer;
     margin-top: 10px;
+    
 }
+button:hover {
+    animation: colChange 3s infinite;
+}
+
+@keyframes colChange {
+    0% {
+        background: linear-gradient(to right, #3a7bd5, #3a6073);
+    }
+    50% {
+        background: linear-gradient(to right, cyan, rgb(55, 55, 241));
+    }
+    100% {
+        background: linear-gradient(to right, #43cea2, #185a9d);
+    }
+}
+
 
 button+p {
     margin-top: 20px;
